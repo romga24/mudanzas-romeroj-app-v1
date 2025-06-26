@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presupuesto - Mudanzas Romero J</title>
+  <style>
+    @media only screen and (max-width: 600px) {
+      .container {
+        padding: 15px !important;
+      }
+      .footer td {
+        display: block;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 10px 0 !important;
+      }
+      .footer img {
+        margin: 0 auto !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin:0; padding:0;">
+  <div style="font-family: Arial, sans-serif; color: #000; max-width: 600px; margin: 0 auto; padding: 20px;" class="container">
+
+    <!-- Saludo -->
+    <p style="font-size: 18px; margin-bottom: 16px;">
+      Estimado/a <strong><%= presupuesto.nombre %></strong>,
+    </p>
+
+    <!-- Cuerpo principal -->
+    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 24px;">
+      Gracias por contactar con <strong>Mudanzas Romero J</strong>. Hemos recibido tu solicitud de presupuesto y estos son los detalles que nos proporcionaste:
+    </p>
+
+    <!-- Datos del presupuesto -->
+    <table cellpadding="0" cellspacing="0" style="font-size: 15px; line-height: 1.8; margin-bottom: 30px; width: 100%;">
+      <tr><td><strong>Tipo de servicio: </strong></td><td><%= presupuesto.tipoServicio %></td></tr>
+      <tr><td><strong>Fecha solicitada: </strong></td><td><%= new Date(presupuesto.fecha).toLocaleDateString() %></td></tr>
+      <tr><td><strong>Dirección de origen: </strong></td><td><%= presupuesto.direccionOrigen %></td></tr>
+      <tr><td><strong>Dirección de destino: </strong></td><td><%= presupuesto.direccionDestino %></td></tr>
+      <% if (presupuesto.consulta) { %>
+        <tr><td><strong>Comentario adicional: </strong></td><td><%= presupuesto.consulta %></td></tr>
+      <% } %>
+    </table>
+
+    <!-- Mensaje final -->
+    <p style="font-size: 15px; margin-bottom: 40px;">
+      En breve, uno de nuestros asesores se pondrá en contacto contigo para ofrecerte un presupuesto detallado y resolver cualquier duda que puedas tener.
+    </p>
+
+    <!-- Pie de página -->
+    <table class="footer" cellpadding="0" cellspacing="0" style="width: 100%; color: black; font-size: 16px; padding: 20px; border-radius: 6px;">
+      <tr>
+        <td style="vertical-align: top; padding-right: 15px;">
+          <img src="cid:logo" alt="Logo de la empresa" style="width: 180px; max-width: 100%; height: auto;">
+        </td>
+        <td style="vertical-align: top;">
+          <div><strong>Mudanzas Romero J</strong></div>
+          <div><strong>Dirección:</strong> <%= direccion %></div>
+          <div><strong>Código Postal:</strong> <%= codigoPostal %></div>
+          <div><strong>Teléfono:</strong> <%= movil %></div>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+</body>
+</html>
