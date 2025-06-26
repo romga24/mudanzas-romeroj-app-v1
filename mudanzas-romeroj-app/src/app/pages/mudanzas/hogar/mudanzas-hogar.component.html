@@ -1,0 +1,110 @@
+<app-header></app-header>
+
+<section class="relative h-[18rem] w-full bg-white overflow-hidden">
+  <img [src]="seccionHogarImagen" alt="Mudanza en hogar" class="w-full h-full object-cover" />
+  <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+    <h1 class="text-white text-5xl font-bold px-4 text-center">Mudanzas del Hogar</h1>
+  </div>
+</section>
+
+
+<section class="py-16 bg-gray-100 w-full">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+      El valor del embalaje profesional
+    </h2>
+    <p class="text-lg text-gray-700 text-center mb-10 max-w-3xl mx-auto">
+      Compara un salón sin embalar con un salón perfectamente protegido por nuestro equipo.
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-6">
+      <!-- Imagen antes -->
+      <div class="md:w-1/2">
+        <img [src]="mudanzasHogarImagenAntes" alt="Salón sin embalar"
+          class="rounded-lg shadow-lg w-full object-cover max-h-[400px]" />
+        <p class="text-center text-gray-700 mt-2 font-semibold">Salón sin embalar</p>
+      </div>
+
+      <!-- Imagen después -->
+      <div class="md:w-1/2">
+        <img [src]="mudanzasHogarImagenDespues" alt="Salón embalado"
+          class="rounded-lg shadow-lg w-full object-cover max-h-[400px]" />
+        <p class="text-center text-gray-700 mt-2 font-semibold">Salón embalado</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-14">
+  <div class="max-w-6xl mx-auto px-6 text-gray-800 font-sans">
+    <h2 class="text-3xl font-bold text-[#1B8C8C] mb-6">Tu hogar, nuestro compromiso</h2>
+    <p class="text-lg leading-relaxed mb-4">
+      En cada mudanza entendemos que no solo movemos cajas, sino recuerdos, sueños y momentos que hacen de tu casa un
+      verdadero hogar. Por eso, tratamos cada objeto con el máximo cuidado y respeto.
+    </p>
+    <p class="text-lg leading-relaxed">
+      Nuestro compromiso es garantizar que cada traslado se realice con precisión, dedicación y cariño, porque sabemos
+      que cada pertenencia tiene un valor incalculable para ti y tu familia.
+    </p>
+  </div>
+</section>
+
+<section class="bg-white py-14 text-justify">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+    <div class="md:w-1/2">
+      <h2 class="text-3xl font-bold text-[#1B8C8C] mb-6">El confort empieza en casa</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        Un hogar cómodo y seguro es el lugar donde comienzan las mejores historias. Nuestro trabajo es ayudarte a llegar
+        allí sin estrés ni preocupaciones.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        Porque cada detalle cuenta, cuidamos hasta el más pequeño objeto para que tu mudanza sea el inicio de un nuevo
+        capítulo lleno de confort.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Nos aseguramos de que cada paso del proceso sea transparente y fluido, para que puedas enfocarte en lo
+        importante: crear recuerdos en tu nuevo hogar.
+      </p>
+    </div>
+    <div class="md:w-1/2">
+      <img [src]="mudanzasHogarImagenUno" alt="Confort en hogar"
+        class="rounded-lg shadow-md w-full object-cover h-auto max-h-[300px]" />
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-14">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-[#1B8C8C] mb-6">Donde la familia se encuentra</h2>
+    <p class="text-lg leading-relaxed max-w-3xl mx-auto mb-4 text-gray-700">
+      El hogar es el espacio donde se construyen los lazos más fuertes. En Hogar Express Madrid sabemos que una mudanza
+      implica mucho más que cambiar de dirección, implica mover la esencia de tu familia.
+    </p>
+    <p class="text-lg leading-relaxed max-w-3xl mx-auto text-gray-700">
+      Por eso, cada servicio está pensado para preservar esa esencia, brindando tranquilidad y seguridad en cada paso
+      del camino hacia tu nuevo hogar.
+    </p>
+  </div>
+</section>
+
+<section class="bg-white py-14 text-justify">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+    <div class="md:w-1/2 order-2 md:order-1">
+      <img [src]="mudanzasHogarImagenDos" alt="Seguridad en mudanza"
+        class="rounded-lg shadow-md w-full object-cover h-auto max-h-[300px]" />
+    </div>
+    <div class="md:w-1/2 order-1 md:order-2">
+      <h2 class="text-3xl font-bold text-[#1B8C8C] mb-6">Seguridad para tu hogar</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        Sabemos lo importante que es confiar en quien mueve tu hogar. Por eso, nuestro equipo se asegura de que cada
+        etapa de la mudanza se realice con la máxima seguridad y profesionalismo.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Utilizamos materiales de embalaje de alta calidad, técnicas probadas y un seguimiento constante para que puedas
+        estar tranquilo durante todo el proceso.
+      </p>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

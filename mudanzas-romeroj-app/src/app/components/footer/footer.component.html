@@ -1,0 +1,104 @@
+<footer class="bg-[#249EA1] text-white">
+  <div class="mx-auto max-w-screen-xl px-6 py-16 sm:px-12 lg:px-20">
+
+    <!-- FILA SUPERIOR: Logo y Contacto -->
+    <div class="flex flex-col gap-12 lg:gap-16 lg:flex-row items-start justify-between w-full mb-20">
+
+      <!-- Logo -->
+      <div class="w-full lg:w-auto text-center lg:text-left">
+        <img [src]="logoPath" alt="Logo"
+             class="max-h-32 h-auto w-auto mx-auto lg:mx-0" />
+      </div>
+
+      <!-- Contacto -->
+      <div class="grid gap-8 w-full text-white text-lg font-medium text-center md:text-left"
+           style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+
+        <!-- Dirección -->
+        <div class="flex flex-col gap-3">
+          <h4 class="font-bold text-2xl">Dirección</h4>
+          <div class="flex items-start gap-4 justify-center md:justify-start">
+            <fa-icon [icon]="faMapMarkerAlt" class="text-white text-2xl mt-1"></fa-icon>
+            <span>Calle del Corregidor José de Pasamonte, 5, Moratalaz, 28030 Madrid</span>
+          </div>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="flex flex-col gap-3">
+          <h4 class="font-bold text-2xl">Llámanos</h4>
+          <div class="flex items-center gap-4 justify-center md:justify-start">
+            <fa-icon [icon]="faPhone" class="text-white text-2xl"></fa-icon>
+            <a href="tel:+34605583791"
+               class="hover:underline font-semibold transition hover:text-orange-300">
+              +34 605 58 37 91
+            </a>
+          </div>
+        </div>
+
+        <!-- Correo -->
+        <div class="flex flex-col gap-3">
+          <h4 class="font-bold text-2xl">Correo</h4>
+          <div class="flex items-center gap-4 justify-center md:justify-start">
+            <fa-icon [icon]="faEnvelope" class="text-white text-2xl"></fa-icon>
+            <a href="mailto:mudanzasromeroj@gmail.com"
+               class="hover:underline font-semibold transition hover:text-orange-300">
+              mudanzasromeroj&#64;gmail.com
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-white text-base text-center lg:text-left justify-items-center lg:justify-items-start">
+
+      <div>
+        <p class="font-semibold text-lg mb-6">Servicios de Mudanzas</p>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-orange-300 transition">Mudanzas Residenciales</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">Mudanzas Comerciales</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">Embalaje y Desembalaje</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">Transporte Internacional</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">Almacenamiento Seguro</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-semibold text-lg mb-6">Company</p>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-orange-300 transition">About</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">Meet the Team</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">Accounts Review</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-semibold text-lg mb-6">Helpful Links</p>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-orange-300 transition">Contact</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">FAQs</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">Live Chat</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-semibold text-lg mb-6">Legal</p>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-orange-300 transition">Accessibility</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">Returns Policy</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">Refund Policy</a></li>
+          <li><a href="#" class="hover:text-orange-300 transition">Hiring Statistics</a></li>
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- COPYRIGHT -->
+    <p class="text-center text-white/60 text-xs mt-16">
+      © {{ currentYear }}. Empresa de Mudanzas. Todos los derechos reservados.
+    </p>
+    <p class="text-center text-white/60 text-xs mt-16">
+     Diseñado por Romel Romero
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,47 @@
+<app-header></app-header>
+
+<!-- Portada -->
+<section class="relative h-96 overflow-hidden bg-white">
+  <img [src]="contactoImagenPath" alt="Imagen de contacto" class="w-full h-full object-cover" />
+  <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+    <h1 class="text-white text-5xl text-center font-bold font-helvetica">Contacto</h1>
+  </div>
+</section>
+
+<!-- Información de contacto -->
+<section class="bg-gray-50 py-16 font-sans">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <!-- Información -->
+    <div>
+      <h2 class="text-3xl font-bold text-[#249EA1] mb-6">¿Dónde estamos?</h2>
+      <!-- <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        Nos encontramos en una ubicación estratégica para facilitar tu mudanza dentro o fuera de España.
+      </p> -->
+      <p class="text-lg text-gray-700 leading-relaxed mb-2">
+        <strong>Dirección:</strong> Calle del Corregidor José de Pasamonte 5, Madrid, España
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-2">
+        <strong>Teléfono:</strong> +34 605 58 37 91
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-2">
+        <strong>Email:</strong> mudanzasromeroj&#64;gmail.com
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        <strong>Horario:</strong> Lunes a Sábado de 8:00 a 20:00
+      </p>
+    </div>
+
+    <!-- Mapa -->
+    <div class="w-full">
+      <div class="relative" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.920665772273!2d-3.6518634240434986!3d40.41060825601195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4225f6dc33a36b%3A0x2baad7ec7ea09101!2sCalle%20del%20Corregidor%20Jos%C3%A9%20de%20Pasamonte%2C%205%2C%20Moratalaz%2C%2028030%20Madrid!5e0!3m2!1ses!2ses!4v1750626842843!5m2!1ses!2ses"
+          class="absolute top-0 left-0 w-full h-full border-0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<app-footer></app-footer>

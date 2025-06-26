@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<section class="py-16 sm:py-20 bg-white text-gray-900 w-full px-4 sm:px-6 lg:px-8">
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 max-w-7xl mx-auto">
+    <!-- Mudanzas del hogar -->
+    <a [routerLink]="['/mudanzas', 'hogar']" class="bg-white shadow-lg rounded-lg flex flex-col border-2 group cursor-pointer hover:shadow-xl transition-shadow duration-300">
+      <div class="flex items-center justify-center p-6 sm:p-8">
+        <fa-icon [icon]="faHouse" size="4x"
+          class="text-[#249EA1] group-hover:text-[#FD5900] transition-colors duration-300"></fa-icon>
+      </div>
+      <h2
+        class="text-2xl sm:text-3xl font-bold mb-5 text-[#249EA1] text-center uppercase group-hover:text-[#FD5900] transition-colors duration-300 leading-snug">
+        MUDANZAS DEL HOGAR
+      </h2>
+      
+      
+    </a>
+
+    <!-- Mudanzas de oficina -->
+    <a [routerLink]="['/mudanzas', 'oficina']" class="bg-white shadow-lg rounded-lg flex flex-col border-2 group cursor-pointer hover:shadow-xl transition-shadow duration-300">
+      <div class="flex items-center justify-center p-6 sm:p-8">
+        <fa-icon [icon]="faBuilding" size="4x"
+          class="text-[#249EA1] group-hover:text-[#FD5900] transition-colors duration-300"></fa-icon>
+      </div>
+      <h2
+        class="text-2xl sm:text-3xl font-bold mb-5 text-[#249EA1] text-center uppercase group-hover:text-[#FD5900] transition-colors duration-300 leading-snug">
+        MUDANZAS DE OFICINA
+      </h2>
+    </a>
+
+
+  </div>
+</section>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+
+

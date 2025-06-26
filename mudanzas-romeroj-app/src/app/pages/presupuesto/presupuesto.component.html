@@ -1,0 +1,140 @@
+<app-header></app-header>
+
+<section 
+  class="relative py-24 px-4 sm:px-6 lg:px-12 xl:px-24 bg-cover bg-center bg-no-repeat"
+  style="background-image: url('assets/img/imagen-formulario.jpg');"
+>
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto bg-white bg-opacity-95 backdrop-blur-md rounded-2xl shadow-2xl p-8 sm:p-12">
+    <h2 class="text-4xl font-bold text-[#249EA1] mb-10 text-center">
+      Pídenos presupuesto sin compromiso
+    </h2>
+
+    <form 
+      [formGroup]="presupuestoForm" 
+      (ngSubmit)="onSubmit()" 
+      class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6"
+    >
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Tipo de servicio</label>
+        <select formControlName="tipoServicio" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-[#249EA1] focus:border-[#249EA1]">
+          <option value="">Elegir tipo de servicio</option>
+          <option value="hogar">Hogar</option>
+          <option value="empresa">Empresa/Oficina</option>
+          <option value="porte">Porte o traslado</option>
+        </select>
+        <div *ngIf="presupuestoForm.get('tipoServicio')?.touched && presupuestoForm.get('tipoServicio')?.invalid" class="text-red-500 text-sm mt-1">
+          Seleccione un tipo de servicio.
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Nombre y apellido</label>
+        <input type="text" formControlName="nombre" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-[#249EA1] focus:border-[#249EA1]" />
+        <div *ngIf="presupuestoForm.get('nombre')?.touched && presupuestoForm.get('nombre')?.invalid" class="text-red-500 text-sm mt-1">
+          <span *ngIf="presupuestoForm.get('nombre')?.errors?.['required']">El nombre es obligatorio.</span>
+          <span *ngIf="presupuestoForm.get('nombre')?.errors?.['minlength']">Mínimo 3 caracteres.</span>
+          <span *ngIf="presupuestoForm.get('nombre')?.errors?.['pattern']">Solo letras y espacios permitidos.</span>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Teléfono</label>
+        <input type="tel" formControlName="telefono" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-[#249EA1] focus:border-[#249EA1]" />
+        <div *ngIf="presupuestoForm.get('telefono')?.touched && presupuestoForm.get('telefono')?.invalid" class="text-red-500 text-sm mt-1">
+          <span *ngIf="presupuestoForm.get('telefono')?.errors?.['required']">El teléfono es obligatorio.</span>
+          <span *ngIf="presupuestoForm.get('telefono')?.errors?.['pattern']">Debe contener entre 9 y 15 dígitos numéricos.</span>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+        <input type="email" formControlName="email" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-[#249EA1] focus:border-[#249EA1]" />
+        <div *ngIf="presupuestoForm.get('email')?.touched && presupuestoForm.get('email')?.invalid" class="text-red-500 text-sm mt-1">
+          <span *ngIf="presupuestoForm.get('email')?.errors?.['required']">El email es obligatorio.</span>
+          <span *ngIf="presupuestoForm.get('email')?.errors?.['email']">Formato de email no válido.</span>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Fecha estimada</label>
+        <input
+          type="date"
+          formControlName="fecha"
+          [attr.min]="minDate"
+          class="w-full border border-gray-300 rounded-lg p-3 focus:ring-[#249EA1] focus:border-[#249EA1]"
+        />
+        <div *ngIf="presupuestoForm.get('fecha')?.touched && presupuestoForm.get('fecha')?.invalid" class="text-red-500 text-sm mt-1">
+          <span *ngIf="presupuestoForm.get('fecha')?.errors?.['required']">La fecha es obligatoria.</span>
+          <span *ngIf="presupuestoForm.get('fecha')?.errors?.['fechaPasada']">No se permite una fecha anterior a hoy.</span>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Dirección de origen</label>
+        <input type="text" formControlName="direccionOrigen" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-[#249EA1] focus:border-[#249EA1]" />
+        <div *ngIf="presupuestoForm.get('direccionOrigen')?.touched && presupuestoForm.get('direccionOrigen')?.invalid" class="text-red-500 text-sm mt-1">
+          <span *ngIf="presupuestoForm.get('direccionOrigen')?.errors?.['required']">Campo obligatorio.</span>
+          <span *ngIf="presupuestoForm.get('direccionOrigen')?.errors?.['minlength']">Mínimo 10 caracteres.</span>
+          <span *ngIf="presupuestoForm.get('direccionOrigen')?.errors?.['pattern']">Dirección no válida.</span>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Dirección de destino</label>
+        <input type="text" formControlName="direccionDestino" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-[#249EA1] focus:border-[#249EA1]" />
+        <div *ngIf="presupuestoForm.get('direccionDestino')?.touched && presupuestoForm.get('direccionDestino')?.invalid" class="text-red-500 text-sm mt-1">
+          <span *ngIf="presupuestoForm.get('direccionDestino')?.errors?.['required']">Campo obligatorio.</span>
+          <span *ngIf="presupuestoForm.get('direccionDestino')?.errors?.['minlength']">Mínimo 10 caracteres.</span>
+          <span *ngIf="presupuestoForm.get('direccionDestino')?.errors?.['pattern']">Dirección no válida.</span>
+        </div>
+      </div>
+
+      <div class="col-span-1 lg:col-span-2">
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Breve descripción del mobiliario a trasportar</label>
+        <textarea formControlName="consulta" rows="5" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-[#249EA1] focus:border-[#249EA1]"></textarea>
+        <div *ngIf="presupuestoForm.get('consulta')?.touched && presupuestoForm.get('consulta')?.invalid" class="text-red-500 text-sm mt-1">
+          <span *ngIf="presupuestoForm.get('consulta')?.errors?.['pattern']">Si escribes algo, debe tener al menos 10 caracteres.</span>
+        </div>
+      </div>
+
+      <div class="col-span-1 lg:col-span-2 flex items-center space-x-3">
+        <input type="checkbox" formControlName="politicaPrivacidad" class="h-5 w-5 text-[#249EA1] border-gray-300 rounded" />
+        <label class="text-sm text-gray-700">
+          He leído y acepto las políticas de privacidad
+        </label>
+      </div>
+      <div *ngIf="presupuestoForm.get('politicaPrivacidad')?.touched && presupuestoForm.get('politicaPrivacidad')?.invalid"
+           class="text-red-500 text-sm mt-1 col-span-1 lg:col-span-2">
+        Debe aceptar la política de privacidad.
+      </div>
+
+      <div class="col-span-1 lg:col-span-2">
+        <button type="submit"
+                class="w-full bg-[#249EA1] hover:bg-[#1e8388] text-white font-semibold py-4 rounded-full transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#249EA1]">
+          Solicitar presupuesto
+        </button>
+      </div>
+
+      <p class="col-span-1 lg:col-span-2 text-xs text-gray-500 text-center mt-6">
+        Información básica sobre la protección de datos.
+      </p>
+    </form>
+  </div>
+</section>
+
+<div *ngIf="formEnviadoCorrectamente"
+     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
+  <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 text-center animate-fadeIn">
+    <h3 class="text-2xl font-bold text-green-700 mb-4">¡Enviado correctamente!</h3>
+    <p class="text-gray-600 mb-6">Tu solicitud ha sido recibida. Nos pondremos en contacto pronto.</p>
+    <button (click)="formEnviadoCorrectamente = false"
+            class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold shadow-md transition">
+      Cerrar
+    </button>
+  </div>
+</div>
+
+<app-footer></app-footer>
