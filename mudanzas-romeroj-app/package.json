@@ -27,7 +27,6 @@
     "@tailwindcss/vite": "^4.1.10",
     "daisyui": "^5.0.43",
     "express": "^5.1.0",
-    "ngx-owl-carousel-o": "^19.0.2",
     "rxjs": "~7.8.0",
     "swiper": "^9.4.1",
     "tslib": "^2.3.0",
