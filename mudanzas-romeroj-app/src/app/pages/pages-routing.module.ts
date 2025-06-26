@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { WhoWeAreComponent } from './who-we-are/whoweare.component';
 import { MudanzasComponent } from './mudanzas/mudanzas.component';
@@ -58,6 +58,12 @@ const routes: Routes = [
     redirectTo: ''
   }
 ];
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled', // <- Aquí está la clave
+  anchorScrolling: 'enabled', // opcional, para que haga scroll a anclas
+  scrollOffset: [0, 0], // opcional, offset en x,y
+};
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
