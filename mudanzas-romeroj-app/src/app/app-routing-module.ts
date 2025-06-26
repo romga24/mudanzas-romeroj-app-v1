@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 
 export const routes: Routes = [
   {
@@ -8,6 +8,12 @@ export const routes: Routes = [
   },
   // Puedes añadir más rutas para admin, auth, etc.
 ];
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled', // <- Aquí está la clave
+  anchorScrolling: 'enabled', // opcional, para que haga scroll a anclas
+  scrollOffset: [0, 0], // opcional, offset en x,y
+};
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
