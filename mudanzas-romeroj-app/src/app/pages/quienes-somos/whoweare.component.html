@@ -1,6 +1,5 @@
 <app-header></app-header>
 
-<!-- SECCIÓN 1: PORTADA CON TEXTO -->
 <section class="relative h-96 overflow-hidden bg-white">
   <img [src]="quienesSomosImagenPath" alt="Portada de mudanza" class="w-full h-full object-cover" />
   <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
@@ -8,7 +7,6 @@
   </div>
 </section>
 
-<!-- SECCIÓN 2: INTRODUCCIÓN -->
 <section class="w-full bg-gray-50 py-12">
   <div class="px-6 max-w-5xl mx-auto font-sans text-gray-800 text-justify">
     <h2 class="text-3xl font-bold text-[#249EA1] mb-4">Tu mudanza en manos de expertos</h2>
@@ -28,11 +26,10 @@
   </div>
 </section>
 
-<!-- SECCIÓN 4: MISIÓN, VISIÓN Y VALORES -->
 <section class="bg-white py-16 font-sans">
   <div class="max-w-6xl mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Card Misión -->
+      
       <div
         class="group bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition text-center ring-1 ring-gray-200 cursor-pointer">
         <fa-icon [icon]="faBullseye"
@@ -43,7 +40,7 @@
           clientes.
         </p>
       </div>
-      <!-- Card Visión -->
+
       <div
         class="group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition text-center ring-1 ring-gray-200 cursor-pointer">
         <fa-icon [icon]="faEye"
@@ -53,7 +50,7 @@
           Ser la empresa de mudanzas líder en España, destacada por su trato humano, calidad e innovación logística.
         </p>
       </div>
-      <!-- Card Valores -->
+
       <div
         class="group bg-gray-50 p-6 rounded-2xl shadow-md hover:shadow-xl transition text-left ring-1 ring-gray-200 cursor-pointer">
         <div class="text-center mb-4">
@@ -85,9 +82,9 @@
 
 <section class="bg-gray-50 py-12 px-6 font-sans">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
-    <!-- Texto a la izquierda -->
+
     <div class="md:w-2/3 text-justify order-2 md:order-1">
-      <h2 class="text-3xl font-semibold text-[#249EA1] mb-6 text-center md:text-left">Nuestro compromiso contigo</h2>
+      <h2 class="text-3xl font-semibold text-[#249EA1] mb-6 text-center md:text-left"><strong>Nuestro compromiso contigo</strong></h2>
       <p class="text-lg text-gray-700 leading-relaxed mb-4">
         En <strong>Mudanzas Romero J</strong>, más allá del transporte, construimos relaciones basadas en confianza. Sabemos que cada cliente tiene una historia y necesidades únicas. Por eso, ofrecemos atención cercana y personalizada en cada etapa del proceso.
       </p>
@@ -102,7 +99,6 @@
       </p>
     </div>
 
-    <!-- Imagen a la derecha -->
     <div class="md:w-1/3 w-full md:-mr-8 flex order-1 md:order-2">
       <img [src]="compromisoImagenPath" alt="Compromiso con el cliente"
         class="w-full max-h-[400px] object-cover rounded-xl shadow-md">
