@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { WhoWeAreComponent } from './who-we-are/whoweare.component';
+import { WhoWeAreComponent } from './quienes-somos/whoweare.component';
 import { MudanzasComponent } from './mudanzas/mudanzas.component';
 import { MudanzasHogarComponent } from './mudanzas/hogar/mudanzas-hogar.component';
 import { MudanzasOficinaComponent } from './mudanzas/oficina/mudanzas-oficina.component';
-import { TrasterosGuardamueblesComponent } from './trasteros_guardamuebles/trasteros-guardamuebles.component';
+import { TrasterosGuardamueblesComponent } from './trasteros-guardamuebles/trasteros-guardamuebles.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { PresupuestoComponent } from './presupuesto/presupuesto.component';
 
@@ -59,11 +59,7 @@ const routes: Routes = [
   }
 ];
 
-const routerOptions: ExtraOptions = {
-  scrollPositionRestoration: 'enabled', // <- Aquí está la clave
-  anchorScrolling: 'enabled', // opcional, para que haga scroll a anclas
-  scrollOffset: [0, 0], // opcional, offset en x,y
-};
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

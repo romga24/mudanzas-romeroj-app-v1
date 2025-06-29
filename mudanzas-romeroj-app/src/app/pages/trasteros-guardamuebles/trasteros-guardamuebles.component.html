@@ -21,8 +21,12 @@
 
 <section class="bg-white py-14 text-justify">
   <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+    
+    <!-- Texto -->
     <div class="md:w-1/2">
-      <h2 class="text-3xl font-bold text-[#1B8C8C] mb-6">El espacio que necesitas, sin complicaciones</h2>
+      <h2 class="text-3xl font-bold text-[#1B8C8C] mb-6">
+        El espacio que necesitas, sin complicaciones
+      </h2>
       <p class="text-gray-700 mb-4 text-lg leading-relaxed">
         Nuestro guardamuebles está diseñado para ofrecerte un espacio flexible y seguro, adaptándose a tus necesidades de almacenamiento temporal o prolongado.
       </p>
@@ -33,11 +37,19 @@
         Así, puedes liberar espacio en tu hogar o negocio, sin perder la tranquilidad de que tus muebles están bien cuidados.
       </p>
     </div>
-    <div class="md:w-1/2">
-      <img [src]="guarmueblesImagenUno" alt="Guardamuebles organizado" class="rounded-lg shadow-md w-full object-cover h-20 md:h-auto md:max-h-[300px]" />
+
+    <!-- Imagen -->
+    <div class="md:w-1/2 w-full">
+      <img 
+        [src]="guarmueblesImagenUno" 
+        alt="Guardamuebles organizado"
+        class="rounded-lg shadow-md w-full object-cover max-h-[400px] sm:max-h-[300px] md:max-h-[350px] lg:max-h-[400px]" 
+      />
     </div>
+    
   </div>
 </section>
+
 
 <section class="bg-gray-50 py-14">
   <div class="max-w-6xl mx-auto px-6 text-center">
